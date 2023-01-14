@@ -9,7 +9,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body className="bg-slate-200 dark:bg-gray-900 dark:text-white">
+        <nav>
+          <a href="/">
+            Home
+          </a>
+          <a href="/blogs">
+            Blogs
+          </a>
+        </nav>
+        {children}
+      </body>
     </html>
   );
 }
