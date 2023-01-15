@@ -44,6 +44,8 @@ next-env.d.ts
 
 # Pocketbase
 pocketbase
+/pb_data
 
 # Images
 /images
+/public/images
