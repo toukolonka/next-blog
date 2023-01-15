@@ -1,8 +1,11 @@
 import React from 'react';
+import BlogForm from './blogs/BlogForm';
 
 function HomePage() {
   return (
-    <div className="text-lg max-w-xl w-full mx-auto">Hello world</div>
+    <div className="max-w-xl w-full mx-auto">
+      <BlogForm />
+    </div>
   );
 }
 

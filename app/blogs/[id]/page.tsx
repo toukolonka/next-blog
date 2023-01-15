@@ -21,7 +21,7 @@ async function BlogPage({ params }: any) {
   const url = `http://localhost:8090/api/files/blogs/${blog.id}/${imageName}`;
 
   return (
-    <div className="max-w-xl w-full mx-auto border border-black dark:border-white mt-2 mb-10">
+    <div className="max-w-xl w-full mx-auto border border-black dark:border-white mt-2 mb-10 rounded">
       <div className="p-4">
         <BlogText blog={blog} fullText />
       </div>

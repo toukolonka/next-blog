@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import BlogCard from './BlogCard';
-import BlogForm from './BlogForm';
 
 async function getBlogs() {
   const response = await fetch(
@@ -17,18 +16,15 @@ async function BlogsPage() {
   const blogs = await getBlogs();
 
   return (
-    <>
-      <div className="max-w-xl w-full mx-auto">
-        {blogs?.map((blog) => (
-          <Link className="w-full" href={`/blogs/${blog.id}`}>
-            <div className="max-w-xl w-full flex mx-auto my-2 md:hover:scale-[1.02] bg-white dark:bg-gray-500 md:hover:dark:bg-gray-700 rounded">
-              <BlogCard key={blog.id} blog={blog} />
-            </div>
-          </Link>
-        ))}
-      </div>
-      <BlogForm />
-    </>
+    <div className="max-w-xl w-full mx-auto mb-8">
+      {blogs?.map((blog) => (
+        <Link className="w-full" href={`/blogs/${blog.id}`}>
+          <div className="max-w-xl w-full flex mx-auto my-2 md:hover:scale-[1.02] bg-white dark:bg-gray-500 md:hover:dark:bg-gray-700 rounded">
+            <BlogCard key={blog.id} blog={blog} />
+          </div>
+        </Link>
+      ))}
+    </div>
   );
 }
 
