@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
-import { sleep } from '../utils';
+// import { sleep } from '../utils';
 
 function BlogForm() {
   const [name, setName] = useState('');
@@ -36,7 +36,8 @@ function BlogForm() {
     setPreviewText('');
     setImage(null);
 
-    await sleep(500);
+    // await sleep(500);
+    router.replace('/');
     router.refresh();
   };
 

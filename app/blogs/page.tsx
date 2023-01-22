@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import BlogCard from './BlogCard';
+import BlogCard from '../../components/BlogCard';
 
 async function getBlogs() {
   const response = await fetch(

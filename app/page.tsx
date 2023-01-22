@@ -1,5 +1,5 @@
 import React from 'react';
-import BlogForm from './blogs/BlogForm';
+import BlogForm from '../components/BlogForm';
 
 function HomePage() {
   return (

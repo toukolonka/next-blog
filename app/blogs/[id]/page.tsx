@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import BlogText from '../BlogText';
-import AuthorText from '../AuthorText';
+import BlogText from '../../../components/BlogText';
+import AuthorText from '../../../components/AuthorText';
 
 async function getBlog(blogId: string) {
   const response = await fetch(
