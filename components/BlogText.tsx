@@ -1,6 +1,13 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
+import { Blog } from '../models/Blog';
 
-function BlogText({ blog, fullText }: any) {
+type BlogTextProps = {
+  blog: Blog,
+  fullText?: boolean,
+};
+
+function BlogText({ blog, fullText = false }: BlogTextProps) {
   const {
     name, content, previewText,
   } = blog || {};

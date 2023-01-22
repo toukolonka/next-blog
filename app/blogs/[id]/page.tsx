@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import BlogText from '../../../components/BlogText';
 import AuthorText from '../../../components/AuthorText';
+import { Blog } from '../../../models/Blog';
 
 async function getBlog(blogId: string) {
   const response = await fetch(
@@ -10,9 +11,9 @@ async function getBlog(blogId: string) {
       next: { revalidate: 10 },
     },
   );
-  const data = await response.json();
+  const blog = (await response.json()) as Blog;
 
-  return data;
+  return blog;
 }
 
 async function BlogPage({ params }: any) {

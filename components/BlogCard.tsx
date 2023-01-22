@@ -2,8 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import BlogText from './BlogText';
 import AuthorText from './AuthorText';
+import { Blog } from '../models/Blog';
 
-function BlogCard({ blog }: any) {
+type BlogCardProps = {
+  blog: Blog,
+};
+
+function BlogCard({ blog }: BlogCardProps) {
   const { id } = blog || {};
 
   const imageName = blog.images;

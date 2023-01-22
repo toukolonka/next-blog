@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Me from '../../public/images/Me.png';
+import Me from '../public/images/Me.png';
 
 function AuthorText({ author, created }: any) {
   return (

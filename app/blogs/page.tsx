@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import BlogCard from '../../components/BlogCard';
+import { Blog } from '../../models/Blog';
 
 async function getBlogs() {
   const response = await fetch(
@@ -8,8 +9,9 @@ async function getBlogs() {
     { cache: 'no-store' },
   );
   const data = await response.json();
+  const blogs = data?.items as Blog[];
 
-  return data?.items as any[];
+  return blogs;
 }
 
 async function BlogsPage() {
